@@ -1,6 +1,11 @@
 import styles from "./page.module.css";
 import Movie from "./MovieItem.tsx";
 
+export const metadata = {
+  title: "home page",
+  description: "home , nextjs13.2, .... ",
+};
+
 export default async function Home() {
   const data = await fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.MOVIE_API_KEY}&language=en-US&page=1`
